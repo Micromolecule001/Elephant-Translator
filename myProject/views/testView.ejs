@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test View</title>
+</head>
+<body>
+    <h1>Test Data</h1>
+    <% if (testData) { %>
+        <p>ID: <%= testData.id %></p>
+        <p>Name: <%= testData.name %></p>
+    <% } else { %>
+        <p>No test data found</p>
+    <% } %>
+
+    <!-- Форма для обновления данных -->
+    <h2> Update Test Data </h2>
+    <form action="/test" method="POST" id="updateForm">
+        <input type="hidden" name="_method" value="PUT">
+        <input name="new__id"  placeholder="New ID">
+        <input name="new__name" placeholder="New Name">
+        <button type="submit"> Update </button>
+    </form>
+
+
+    <!-- Форма для удаления данных -->
+    <h2> Delete Test Data </h2>
+    <form action="/test" method="POST">
+        <input type="hidden" name="_method" value="DELETE"> <!-- Для отправки метода DELETE -->
+        <button type="submit"> Delete </button>
+    </form>
+
+    <!-- Форма для получения данных -->
+    <h2> Get Test Data </h2>
+    <form action="/test" method="GET">
+        <button type="submit"> Get </button>
+    </form>
+</body>
+</html>
