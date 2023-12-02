@@ -18,9 +18,10 @@ exports.updateTestData = (req, res) => {
     console.log('testData before update:', testData);
 
     let newId = Number(req.body.new__id);
+    let newName = String(req.body.new__name);
 
     testData.id = newId;
-    testData.name = req.body.new__name;
+    testData.name = newName;
 
     console.log('testData after update:', testData);
 
