@@ -1,0 +1,58 @@
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(54deg, rgba(3,49,88,0.3), rgba(12,117,124,0.9));
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    section {
+        background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity to your liking */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        padding: 8px 15px;
+        border-radius: 5px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+
+<section>
+    <div class="content">
+        <h2> Login </h2>
+
+        <form action="/testView" method="POST" id="loginForm">
+            <input type="hidden" name="_method" value="PUT">
+            <input name="log__login"  placeholder="Login">
+            <input name="log__password" placeholder="Password">
+        <button type="submit"> Sign in </button>
+    </form>
+    </div>
+</section>

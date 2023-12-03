@@ -3,7 +3,7 @@
     body {
         margin: 0;
         padding: 0;
-        background-image: url('your-background-image.jpg'); /* !!!!!!!!!!!!!!!!!!!!!!!!  вот сюда картинку пихать */
+        background: linear-gradient(54deg, rgba(3,49,88,0.3), rgba(12,117,124,0.9));
         background-size: cover;
         display: flex;
         justify-content: center;
@@ -48,12 +48,12 @@
     <div class="content">
         <h2> Registration </h2>
 
-        <form action="/registration" method="POST" id="updateForm">
+        <form action="/registration" method="POST" id="registrationForm">
             <input type="hidden" name="_method" value="PUT">
             <input name="new__login"  placeholder="Login">
             <input name="new__email"  placeholder="Email">
-            <input name="new__password" placeholder="Password">
-            <input name="repeat__password" placeholder="Repeat password">
+            <input type="password" name="new__password" placeholder="Password">
+            <input type="password" name="repeat__password" placeholder="Repeat password">
         <button type="submit"> Sign Up </button>
     </form>
     </div>
