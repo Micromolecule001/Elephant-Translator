@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update User Data</title>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transaction History</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(132deg, rgba(81, 177, 105, 0.4), rgba(98, 133, 118, 0.6));
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    table {
+      width: 80%;
+      margin-top: 20px;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Transaction History</h1>
+  
+  <!-- Код для отображения истории транзакций -->
+  
+</body>
+</html>
+
+<body>
+  <h1>Update User Data</h1>
+  <form action="/updateUserData" method="POST">
+    <label for="login">Login:</label>
+    <input type="text" id="login" name="login" required><br><br>
+
+    <label for="newLogin">New Login:</label>
+    <input type="text" id="newLogin" name="newLogin"><br><br>
+
+    <label for="newPassword">New Password:</label>
+    <input type="password" id="newPassword" name="newPassword"><br><br>
+
+    <label for="newEmail">New Email:</label>
+    <input type="email" id="newEmail" name="newEmail"><br><br>
+
+    <input type="submit" value="Update">
+  </form>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Dashboard</title>
+  <style>
+    /* Centering forms */
+    .centered-form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.9); /* Adjust fade (last value) */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Background gradient */
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(132deg, rgba(81,177,105,0.4), rgba(98, 133, 118, 0.6));
+      /* Adjust gradient colors as desired */
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* User Cabinet Button */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffffff; /* Button background color */
+      color: #333; /* Button text color */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ddd; /* Button background color on hover */
+    }
+
+    /* Translate Word Form */
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="text"],
+    select {
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 200px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50; /* Button background color */
+      color: white; /* Button text color */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049; /* Button background color on hover */
+    }
+
+    /* Display Translation */
+    div.translation {
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- User Cabinet Button -->
+  <a href="/user=<%= userId %>"><button style="position: absolute; top: 20px; right: 20px;"> User Cabinet </button></a>
+
+
+  <div class="centered-form">
+
+    <!-- Translate Word Form -->
+    <form action="/translate" method="POST">
+      <h2>Translate Word</h2>
+      <input type="text" name="wordToTranslate" placeholder="Enter word to translate">
+      <select name="language">
+        <option value="english">English</option>
+        <option value="spanish">Spanish</option>
+        <!-- Add more languages as needed -->
+      </select>
+      <button type="submit"

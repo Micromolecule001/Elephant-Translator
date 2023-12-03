@@ -1,4 +1,77 @@
-<!-- Display user details -->
-<h1>User Details</h1>
-<p>Name: Pedro Machado</p>
-<p>Email: Pedro.Machado@gmail.com</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(132deg, rgba(81, 177, 105, 0.4), rgba(98, 133, 118, 0.6));
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #51b169;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #468257;
+    }
+
+    .logout_button {
+        display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #b15151;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .logout_button:hover {
+      background-color: #824646;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>User Profile</h1>
+    <div>
+      <button class="button" onclick="window.location.href='/updateData?userId=<%= userId %>'">Change Personal Information</button>
+
+      <button class="button" onclick="window.location.href='/transactionHistory?userId=<%= userId %>'">View Transaction History</button>
+
+      <a href="/" class="logout_button">Logout</a>
+    </div>
+  </div>
+</body>
+</html>

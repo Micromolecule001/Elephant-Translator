@@ -41,10 +41,51 @@ app.get('/login', (req, res) => {
   });
 });
 
-app.post('/login', userController.loginUser);
+app.post('/home', userController.loginUser);
+
+// HOME
+
+app.get('/home', (req, res) => {
+
+  // Logic to render the registration form
+  res.render('homeView', {
+    translation: 'there will be your translation'
+  });
+});
 
 
+app.post('/home', userController.addNewUser);
 
+
+// User cabinet
+
+app.get('/user=:userId', (req, res) => {
+  const userId = req.params.userId;
+  res.render('userView', {
+    userId: userId,
+  });
+});
+
+// Update data
+
+app.post('/updateData', userController.updateUserData);
+
+app.get('/updateData', (req, res) => {
+  const userId = req.query.userId;
+  
+  res.render('updateUserView', { 
+    userId: userId, 
+  }); 
+});
+
+// GET запрос для страницы истории переводов
+app.get('/translationHistory', (req, res) => {
+  const userId = req.query.userId;
+  
+  res.render('historyView', { 
+    userId: userId 
+  });
+}); 
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
